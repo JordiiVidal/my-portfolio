@@ -1,20 +1,26 @@
-export type Work = {
+export type WorkExperience = {
   id: number;
   title: string;
   description: string;
   company: string;
   current: boolean;
-  stack: string[];
+  startDate: string;
+  endDate: string;
+  tecnologies: number[];
 };
 
-export type NavigationLink = {
-  name: string;
-};
+export enum Category {
+  FRONTEND = 1,
+  BACKEND = 2,
+  MOBILE = 3,
+}
 
 export type Tecnology = {
+  id: number;
   name: string;
   icon: string;
-  stack: number; // 1 front - 2 back - 3 full
   experience: number;
   current: boolean;
+  color: string;
+  category: Category;
 };
