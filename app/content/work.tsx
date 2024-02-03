@@ -10,7 +10,7 @@ function ChipsTecnologies({ idWorkedTecnologyList } : {idWorkedTecnologyList : n
                 tecnologies
                     .filter((tecnology) => idWorkedTecnologyList.includes(tecnology.id))
                     .map(t => (
-                        <li key={t.id}>
+                        <li key={t.id} className="mb-2">
                             <Chip icon={t.icon} name={t.name} color={t.color}/>
                         </li>
                     ))

@@ -1,9 +1,8 @@
 
-import Header from "@/app/layout/header";
 import About from '@/app/content/about';
 import Stack from '@/app/content/stack';
 import Work from '@/app/content/work';
-import Projects from '@/app/content/projects';
+import Header from "@/app/layout/header";
 
 export default function Home() {
   return (
@@ -12,7 +11,6 @@ export default function Home() {
       {<About />}
       {<Stack/>}
       {<Work/>}
-      {<Projects />}
     </main>
   );
 }
