@@ -3,10 +3,17 @@ import { WorkExperience } from "@lib/definitions";
 import { tecnologies, workExperiences } from "@lib/placeholder-data";
 import Chip from '@ui/chip';
 import { Title } from '@ui/title';
+import TextWithLinks from "../ui/text-with-links";
+
+const description = `
+    A lo largo de mi carrera, he acumulado una amplia [experiencia] en 
+    diversos proyectos y tecnologías. Cada experiencia me ha permitido 
+    desarrollar mis [habilidades] y ampliar mis [conocimientos].
+`;
 
 function expiranceDates(work: WorkExperience){
     if (work.current){
-        return (<span>{ work.startDate } - Current</span>)
+        return (<span>{ work.startDate } - Activo</span>)
     } else if (work.endDate === work.startDate){
         return (<span>{work.startDate}</span>)
     }
@@ -32,11 +39,11 @@ function ChipsTecnologies({ idWorkedTecnologyList } : {idWorkedTecnologyList : n
 
 export default function Work(){
     return (
-        <Section>
-            <Title text='Work Experience'/>
-            <p className="prose prose-neutral dark:prose-invert text-center text-pretty dark:text-gray-400 text-gray-600">
-                On a mission to build products developers love, and along the way, teach the next generation of developers. Here`s a summary of my work so far.
-            </p>
+        <Section 
+            id="work"
+            title="Work Experience"
+            description={description}
+        >
             <ol className="border-l border-neutral-300 dark:border-neutral-500">
                 {
                     workExperiences.map((work) => (
@@ -50,8 +57,8 @@ export default function Work(){
                                 { work.title}, {expiranceDates(work)}
                             </span>
                             <p className="my-4  text-neutral-500 dark:text-neutral-300">
-                               { work.description }
-                            </p>
+                               {/* { work.description } */}
+                            </p> 
                             <ChipsTecnologies idWorkedTecnologyList={work.tecnologies} /> 
                         </div>
                     </li>

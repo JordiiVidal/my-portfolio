@@ -1,7 +1,7 @@
 import { Section } from '@layout/section';
 import { Subtitle, Title } from '@ui/title';
 import TextWithLinks from '@ui/text-with-links';
-import ButtonLink from '@ui/button-link';
+import ButtonLink, { ButtonLinkProps } from '@ui/button-link';
 
 const description = `
     Con [+5 años] de experiencia creando aplicaciones web e híbridas, estoy preparado 
@@ -10,35 +10,38 @@ const description = `
     innovadores y seguir aprendiendo cada día.
 `;
 
-const buttons = [
+const buttons: ButtonLinkProps[] = [
     {
         text: "Linkedin",
         icon: "buttons/linkedin.svg",
+        link: "https://www.linkedin.com/in/jordi-vidal-rosello/",
+
     },
     {
         text: "Github",
         icon: "buttons/github.svg",
+        link: "https://github.com/JordiiVidal",
     },
     {
         text: "Currículum",
         icon: "buttons/resume.svg",
+        link: "resume.pdf"
     },
 ]
 
 export default function About(){
     return (
-       <Section isAfterHeader={true}>
-            <Title text='Jordi Vidal Roselló'/>
-            <Subtitle text='Full-Stack Developer' />
-            <p className="prose prose-neutral dark:prose-invert text-center text-pretty dark:text-gray-400 text-gray-600">
-                <TextWithLinks>
-                    {description}
-                </TextWithLinks>
-            </p>
+       <Section 
+            id="about"
+            title='Jordi Vidal Roselló'
+            subtitle='Full-Stack Developer'
+            description={description}
+            isAfterHeader={true}
+        >
             <div className="my-8 flex flex-row space-x-2 justify-center w-full overflow-x-auto">
                 {
                     buttons.map((btn) => (
-                        <ButtonLink key={btn.text} text={btn.text} icon={btn.icon}/>
+                        <ButtonLink key={btn.text} {...btn}  />
                     ))
                 }
             </div>

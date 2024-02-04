@@ -5,7 +5,14 @@ import { Section } from '@layout/section';
 import { Tecnology } from '@lib/definitions';
 import { tecnologies } from '@lib/placeholder-data';
 import Card from '@ui/card';
+import TextWithLinks from '@ui/text-with-links';
 import { Title } from '@ui/title';
+
+const description = `
+    En mi camino he forjado una sólida relación con [JavaScript] 
+    y [PHP]. En los últimos [3 años], me he especializado en [Angular]. Actualmente, estoy explorando el 
+    apasionante mundo de [Node.js].
+`;
 
 const filtredTecnologies = tecnologies.filter(t => t.isStack);
 
@@ -33,11 +40,11 @@ function CardTecnology({tecnology} : {tecnology: Tecnology}){
 
 export default function Stack(){
     return (
-        <Section>
-            <Title text='Stack'/>
-            <p className="prose prose-neutral dark:prose-invert text-center text-pretty dark:text-gray-400 text-gray-600">
-                On a mission to build products developers love, and along the way, teach the next generation of developers. Here`s a summary of my work so far.
-            </p>
+        <Section 
+            id="stack"
+            title='Stack'
+            description={description}
+        >
             <div className="grid grid-cols-2 gap-4 mx-4 lg:grid-cols-4">
                 {filtredTecnologies.map((tecnology) => (
                     <CardTecnology key={tecnology.id} tecnology={tecnology} />

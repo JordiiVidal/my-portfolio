@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const navigations = [
-    { name: "Home" , link: "#"},
-    { name: "Stack" , link: "#"},
-    { name: "Work" , link: "#"},
+    { name: "Home" , link: "#about"},
+    { name: "Stack" , link: "#stack"},
+    { name: "Work" , link: "#work"},
     { name: "Projects" , link: "#"},
 ];
   
