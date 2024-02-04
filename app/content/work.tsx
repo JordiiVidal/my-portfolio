@@ -1,7 +1,8 @@
 import { workExperiences, tecnologies } from "../lib/placeholder-data";
 
-import Title from '@ui/title';
+import {Title} from '@ui/title';
 import Chip from '../ui/chip';
+import { Section } from "../ui/section";
 
 function ChipsTecnologies({ idWorkedTecnologyList } : {idWorkedTecnologyList : number[]}){
     return (
@@ -21,7 +22,7 @@ function ChipsTecnologies({ idWorkedTecnologyList } : {idWorkedTecnologyList : n
 
 export default function Work(){
     return (
-        <section className='pt-6 lg:pt-12 flex flex-col gap-6'>
+        <Section>
             <Title text='Work Experience'/>
             <p className="prose prose-neutral dark:prose-invert text-center text-pretty dark:text-gray-400 text-gray-600">
                 On a mission to build products developers love, and along the way, teach the next generation of developers. Here`s a summary of my work so far.
@@ -47,6 +48,6 @@ export default function Work(){
                     ))
                 }
             </ol>
-        </section>
+        </Section>
     );
 }

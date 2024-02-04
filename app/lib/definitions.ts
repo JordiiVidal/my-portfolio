@@ -23,4 +23,5 @@ export type Tecnology = {
   current: boolean;
   color: string;
   category: Category;
+  isStack: boolean;
 };

@@ -1,9 +1,12 @@
 import Image from 'next/image';
-import Title from '@ui/title';
+import {Title} from '@ui/title';
 import { tecnologies } from '../lib/placeholder-data';
 import { Tecnology } from '@/app/lib/definitions';
 import { Card } from '../ui/card';
 import Link from 'next/link';
+import { Section } from '../ui/section';
+
+const filtredTecnologies = tecnologies.filter(t => t.isStack);
 
 function CardTecnology({tecnology} : {tecnology: Tecnology}){
     return ( 
@@ -28,16 +31,16 @@ function CardTecnology({tecnology} : {tecnology: Tecnology}){
 
 export default function Stack(){
     return (
-        <section className='pt-6 lg:pt-12 flex flex-col gap-6'>
+        <Section>
             <Title text='Stack'/>
             <p className="prose prose-neutral dark:prose-invert text-center text-pretty dark:text-gray-400 text-gray-600">
                 On a mission to build products developers love, and along the way, teach the next generation of developers. Here`s a summary of my work so far.
             </p>
             <div className="grid grid-cols-2 gap-4 mx-4 lg:grid-cols-4">
-                {tecnologies.map((tecnology) => (
+                {filtredTecnologies.map((tecnology) => (
                     <CardTecnology key={tecnology.id} tecnology={tecnology} />
                 ))}       
             </div>
-        </section>
+        </Section>
     );
 }

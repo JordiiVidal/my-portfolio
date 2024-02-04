@@ -1,16 +1,18 @@
-import Title from '@ui/title';
+import {Subtitle, Title} from '@ui/title';
 import ExternalLink from '@ui/external-link';
+import { Section } from '../ui/section';
 
 export default function About(){
     return (
-        <section className='pt-12 lg:pt-12 flex flex-col gap-6'>
+       <Section isAfterHeader={true}>
             <Title text='Jordi Vidal Roselló'/>
+            <Subtitle text='Full-Stack Developer' />
             <p className="prose prose-neutral dark:prose-invert text-center text-pretty dark:text-gray-400 text-gray-600">
                 I`m a Full-Stack Developer, optimist, and community builder. I currently 
                 <ExternalLink text='Angular' icon='angular.png'/>
                 as the VP of Product at  community, an open-source web framework built with
                 <ExternalLink text='Node.js' icon='node.png'/>
             </p>
-        </section>
+       </Section>
     );
 }
