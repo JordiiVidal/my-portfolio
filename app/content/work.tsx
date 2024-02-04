@@ -1,8 +1,18 @@
-import { workExperiences, tecnologies } from "../lib/placeholder-data";
+import { Section } from "@layout/section";
+import { WorkExperience } from "@lib/definitions";
+import { tecnologies, workExperiences } from "@lib/placeholder-data";
+import Chip from '@ui/chip';
+import { Title } from '@ui/title';
 
-import {Title} from '@ui/title';
-import Chip from '../ui/chip';
-import { Section } from "../ui/section";
+function expiranceDates(work: WorkExperience){
+    if (work.current){
+        return (<span>{ work.startDate } - Current</span>)
+    } else if (work.endDate === work.startDate){
+        return (<span>{work.startDate}</span>)
+    }
+
+    return (<span>{work.startDate} - {work.endDate}</span>)
+}
 
 function ChipsTecnologies({ idWorkedTecnologyList } : {idWorkedTecnologyList : number[]}){
     return (
@@ -37,7 +47,7 @@ export default function Work(){
                         </div>
                         <div className="mb-6 ml-4">
                             <span className="text-sm text-neutral-700 dark:text-neutral-400">
-                                { work.title} , { work.startDate } - { work.current ? 'Current' : work.endDate}
+                                { work.title}, {expiranceDates(work)}
                             </span>
                             <p className="my-4  text-neutral-500 dark:text-neutral-300">
                                { work.description }

@@ -1,6 +1,6 @@
-import {Subtitle, Title} from '@ui/title';
+import { Section } from '@layout/section';
 import ExternalLink from '@ui/external-link';
-import { Section } from '../ui/section';
+import { Subtitle, Title } from '@ui/title';
 
 export default function About(){
     return (

@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const navigations = [
     { name: "Home" , link: "#"},
-    { name: "Work" , link: "#"},
     { name: "Stack" , link: "#"},
+    { name: "Work" , link: "#"},
     { name: "Projects" , link: "#"},
 ];
   

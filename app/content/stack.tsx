@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import {Title} from '@ui/title';
-import { tecnologies } from '../lib/placeholder-data';
-import { Tecnology } from '@/app/lib/definitions';
-import { Card } from '../ui/card';
 import Link from 'next/link';
-import { Section } from '../ui/section';
+
+import { Section } from '@layout/section';
+import { Tecnology } from '@lib/definitions';
+import { tecnologies } from '@lib/placeholder-data';
+import { Card } from '@ui/card';
+import { Title } from '@ui/title';
 
 const filtredTecnologies = tecnologies.filter(t => t.isStack);
 

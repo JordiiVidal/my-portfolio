@@ -2,7 +2,7 @@
 import About from '@/app/content/about';
 import Stack from '@/app/content/stack';
 import Work from '@/app/content/work';
-import Header from "@/app/layout/header";
+import Header from "@layout/header";
 
 export default function Home() {
   return (
