@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Section } from '@layout/section';
 import { Tecnology } from '@lib/definitions';
 import { tecnologies } from '@lib/placeholder-data';
-import { Card } from '@ui/card';
+import Card from '@ui/card';
 import { Title } from '@ui/title';
 
 const filtredTecnologies = tecnologies.filter(t => t.isStack);
@@ -13,7 +13,8 @@ function CardTecnology({tecnology} : {tecnology: Tecnology}){
     return ( 
         <Card>
             <Link
-                href="#">
+                href="#"
+            >
                 <article className="p-5 flex flex-col items-center align-middle">
                     <Image 
                         alt={tecnology.name}
