@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 const navigations = [
     { name: "Home" , link: "#about"},
@@ -9,20 +12,27 @@ const navigations = [
 ];
   
 export default function Header() {
+
+    const [isOpen, setOpen] = React.useState(false);
+    
+    function handleClick(){
+        setOpen(!isOpen);
+    }
+    
     return (
         <header>
-            <div className="fixed inset-x-0 top-0 z-50 backdrop-blur  duration-200 border-b  bg-zinc-900/500  border-zinc-800 ">
-                <nav className="container flex justify-between p-6 mx-auto">
+            <div className="fixed inset-x-0 top-0 z-50 md:backdrop-blur backdrop-blur-2xl duration-200 border-b  bg-zinc-900/500  border-zinc-800 ">
+                <nav className="container grid md:grid-cols-3 grid-cols-2 p-6 mx-auto">
                     <div className="font-semibold">Portfolio.</div>
-                    <div className="static md:hidden">
+                    <button className="flex md:hidden justify-end" onClick={handleClick}>
                         <Image 
-                            src="/header/menu.svg"
+                            src={`/header/${isOpen ? 'close' : 'menu'}.svg`}
                             alt="menu"
                             width={20}
                             height={20}
                         />
-                    </div>
-                    <ul className="hidden md:flex justify-between gap-8">
+                    </button>
+                    <ul className={`${isOpen ? 'flex' : 'hidden'} duration-500 md:flex md:flex-row flex-col md:justify-between justify-center gap-8 md:h-fit h-[70vh]`}>
                         {navigations.map((item) => (
                             <Link 
                                 key={item.name}
