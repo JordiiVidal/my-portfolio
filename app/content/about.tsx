@@ -1,6 +1,4 @@
 import { Section } from '@layout/section';
-import { Subtitle, Title } from '@ui/title';
-import TextWithLinks from '@ui/text-with-links';
 import ButtonLink, { ButtonLinkProps } from '@ui/button-link';
 
 const description = `
@@ -36,9 +34,8 @@ export default function About(){
             title='Jordi Vidal Roselló'
             subtitle='Full-Stack Developer'
             description={description}
-            isAfterHeader={true}
         >
-            <div className="my-8 flex flex-row space-x-2 justify-center w-full overflow-x-auto">
+            <div className="flex flex-col gap-3">
                 {
                     buttons.map((btn) => (
                         <ButtonLink key={btn.text} {...btn}  />

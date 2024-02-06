@@ -2,8 +2,6 @@ import { Section } from "@layout/section";
 import { WorkExperience } from "@lib/definitions";
 import { tecnologies, workExperiences } from "@lib/placeholder-data";
 import Chip from '@ui/chip';
-import { Title } from '@ui/title';
-import TextWithLinks from "../ui/text-with-links";
 
 const description = `
     A lo largo de mi carrera, he acumulado una amplia [experiencia] en 

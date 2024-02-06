@@ -5,8 +5,6 @@ import { Section } from '@layout/section';
 import { Tecnology } from '@lib/definitions';
 import { tecnologies } from '@lib/placeholder-data';
 import Card from '@ui/card';
-import TextWithLinks from '@ui/text-with-links';
-import { Title } from '@ui/title';
 
 const description = `
     En mi camino he forjado una sólida relación con [JavaScript] 
@@ -45,7 +43,7 @@ export default function Stack(){
             title='Stack'
             description={description}
         >
-            <div className="grid grid-cols-2 gap-4 mx-4 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3">
                 {filtredTecnologies.map((tecnology) => (
                     <CardTecnology key={tecnology.id} tecnology={tecnology} />
                 ))}       

@@ -1,6 +1,6 @@
 export function Subtitle({ text }: { text: string }){
     return (
-        <span className="text-center block mb-3 leading-relaxed text-2xl font-bold text-gray-800 dark:text-white">
+        <span className="text-center block leading-relaxed text-2xl font-bold text-gray-800 dark:text-white">
             { text }
         </span>
     );
