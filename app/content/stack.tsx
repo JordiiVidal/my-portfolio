@@ -43,7 +43,7 @@ export default function Stack(){
             title='Stack'
             description={description}
         >
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3">
                 {filtredTecnologies.map((tecnology) => (
                     <CardTecnology key={tecnology.id} tecnology={tecnology} />
                 ))}       

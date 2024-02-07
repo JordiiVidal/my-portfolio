@@ -13,7 +13,7 @@ export const Section: React.FC<SectionProps> = ({ children, id, title, descripti
 	return (
         <section 
             id={id}
-            className="flex flex-col gap-8 mb-20"
+            className="flex flex-col gap-8 md:mb-48 mb-28"
         >	
             <div className="flex flex-col gap-1">     
                 <Title text={title}/>

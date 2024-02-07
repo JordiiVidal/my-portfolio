@@ -32,7 +32,7 @@ export default function Header() {
                             height={20}
                         />
                     </button>
-                    <ul className={`${isOpen ? 'flex' : 'hidden'} duration-500 md:flex md:flex-row flex-col md:justify-between justify-center gap-8 md:h-fit h-[70vh]`}>
+                    <ul className={`${isOpen ? 'flex' : 'hidden'} duration-500 md:flex md:flex-row flex-col justify-center md:gap-6 gap-8 md:h-fit h-[70vh]`}>
                         {navigations.map((item) => (
                             <Link 
                                 key={item.name}
