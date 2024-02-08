@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { Section } from '@layout/section';
 import { Category, Tecnology } from '@lib/definitions';
-import { tecnologies } from '@lib/placeholder-data';
+import { tecnologiesData } from '@lib/placeholder-data';
 import Card from '@ui/card';
 
 const description = `
@@ -12,7 +12,7 @@ const description = `
     apasionante mundo de [Node.js].
 `;
 
-const filtredTecnologies = (category: Category) => tecnologies.filter(t => t.isStack && t.category === category);
+const filtredTecnologies = (category: Category) => tecnologiesData.filter(t => t.isStack && t.category === category);
 
 function CardTecnology({tecnology} : {tecnology: Tecnology}){
     return ( 

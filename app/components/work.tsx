@@ -1,5 +1,5 @@
 import { WorkExperience } from "@lib/definitions";
-import { tecnologies, workExperiences } from "@lib/placeholder-data";
+import { tecnologiesData, workExperiencesData } from "@lib/placeholder-data";
 import Chip from "@ui/chip";
 import { Section } from "@layout/section";
 
@@ -23,7 +23,7 @@ function ChipsTecnologies({ idWorkedTecnologyList } : {idWorkedTecnologyList : n
     return (
         <ul className="flex gap-x-2 flex-wrap">
             {
-                tecnologies
+                tecnologiesData
                     .filter((tecnology) => idWorkedTecnologyList.includes(tecnology.id))
                     .map(t => (
                         <li key={t.id} className="mb-2">
@@ -44,7 +44,7 @@ export default function Work(){
         >
             <ol className="border-l border-neutral-300 dark:border-neutral-500">
                 {
-                    workExperiences.map((work) => (
+                    workExperiencesData.map((work) => (
                         <li key={work.id}>
                             <div className="flex-start flex items-center pt-3">
                                 <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>

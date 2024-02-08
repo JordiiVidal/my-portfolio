@@ -1,6 +1,6 @@
 import { Category, Tecnology, WorkExperience } from "./definitions";
 
-export const tecnologies: Tecnology[] = [
+export const tecnologiesData: Tecnology[] = [
   {
     id: 1,
     name: "JavaScript",
@@ -24,7 +24,7 @@ export const tecnologies: Tecnology[] = [
   {
     id: 3,
     name: "Angular",
-    icon: "angular.png",
+    icon: "angular.svg",
     color: "#ff44bf",
     experience: 3,
     current: true,
@@ -34,7 +34,7 @@ export const tecnologies: Tecnology[] = [
   {
     id: 4,
     name: "jQuery",
-    icon: "jquery.png",
+    icon: "jquery.svg",
     color: "#265f99",
     experience: 5,
     current: true,
@@ -64,7 +64,7 @@ export const tecnologies: Tecnology[] = [
   {
     id: 7,
     name: "RxJS",
-    icon: "rxjs.png",
+    icon: "rxjs.svg",
     color: "#265f99",
     experience: 5,
     current: true,
@@ -84,7 +84,7 @@ export const tecnologies: Tecnology[] = [
   {
     id: 9,
     name: "Laravel",
-    icon: "laravel.png",
+    icon: "laravel.svg",
     color: "#dd2c14",
     experience: 3,
     current: true,
@@ -94,8 +94,8 @@ export const tecnologies: Tecnology[] = [
   {
     id: 10,
     name: "Codeigniter",
-    icon: "codeigniter.png",
-    color: "#619a5c",
+    icon: "codeigniter.svg",
+    color: "#ee5031",
     experience: 1,
     current: false,
     category: Category.BACKEND,
@@ -104,7 +104,7 @@ export const tecnologies: Tecnology[] = [
   {
     id: 11,
     name: "Java",
-    icon: "java.png",
+    icon: "java.svg",
     color: "#ffffff",
     experience: 3,
     current: true,
@@ -134,7 +134,7 @@ export const tecnologies: Tecnology[] = [
   {
     id: 14,
     name: "Mongo.DB",
-    icon: "mongodb.png",
+    icon: "mongodb.svg",
     color: "#619a5c",
     experience: 1,
     current: false,
@@ -154,8 +154,8 @@ export const tecnologies: Tecnology[] = [
   {
     id: 16,
     name: "Flutter",
-    icon: "flutter.png",
-    color: "#619a5c",
+    icon: "flutter.svg",
+    color: "#49cefa",
     experience: 1,
     current: false,
     category: Category.FRONTEND,
@@ -173,7 +173,7 @@ export const tecnologies: Tecnology[] = [
   },
 ];
 
-export const workExperiences: WorkExperience[] = [
+export const workExperiencesData: WorkExperience[] = [
   {
     id: 1,
     company: "Audax Renovables",
