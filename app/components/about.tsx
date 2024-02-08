@@ -30,7 +30,7 @@ const buttons: ButtonLinkProps[] = [
 export default function About(){
     return (
        <Section 
-            id="about"
+            key="about"
             title='Jordi Vidal Roselló'
             subtitle='Full-Stack Developer'
             description={description}

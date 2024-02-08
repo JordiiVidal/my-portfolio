@@ -12,7 +12,6 @@ export type WorkExperience = {
 export enum Category {
   FRONTEND = 1,
   BACKEND = 2,
-  MOBILE = 3,
 }
 
 export type Tecnology = {

@@ -20,16 +20,18 @@ const ButtonLink: React.FC<ButtonLinkProps> = (props) => {
                     <Image 
                         src={props.icon}
                         alt={props.text}
-                        width={16}
-                        height={16}
+                        height={0}
+                        width={0}
+                        style={{width:'16px', height: "auto" }}
                     />
                     <p className="font-normal text-neutral-900 dark:text-neutral-100">{ props.text }</p>
                 </div>
                 <Image 
                     src="buttons/external-link.svg"
                     alt={props.text}
-                    width={10}
-                    height={10}
+                    height={0}
+                    width={0}
+                    style={{width:'10px', height: "auto" }}
                     className="text-neutral-700 dark:text-neutral-300 transform transition-transform duration-300 group-hover:-rotate-12"
                 />
             </Link>

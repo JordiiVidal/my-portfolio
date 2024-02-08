@@ -22,7 +22,7 @@
       "@lib/*": ["./app/lib/*"],
       "@ui/*": ["./app/ui/*"],
       "@layout/*": ["./app/layout/*"],
-      "@content/*": ["./app/content/*"]
+      "@components/*": ["./app/components/*"]
     }
   },
   "include": [
@@ -30,7 +30,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/content/index.js"
+    "app/components/index.js"
   ],
   "exclude": ["node_modules"]
 }

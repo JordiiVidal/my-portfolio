@@ -1,20 +1,19 @@
-
-import About from '@/app/content/about';
-import Stack from '@/app/content/stack';
-import Work from '@/app/content/work';
+import About from "@components/about";
+import Stack from "@components/stack";
+import Work from "@components/work";
 import Header from "@layout/header";
-import Footer from './layout/footer';
+import Footer from "@layout/footer";
 
 export default function Home() {
   return (
     <main className='md:max-w-2xl mx-auto'>
-      {<Header />}
+      <Header/>
       <div className='md:mt-48 mt-28 px-5'>
-        {<About />}
-        {<Stack/>}
-        {<Work/>}
+        <About />
+        <Stack />
+        <Work />
       </div>
-      {<Footer />}
+      <Footer />
     </main>
   );
 }

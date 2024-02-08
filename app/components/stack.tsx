@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Section } from '@layout/section';
-import { Tecnology } from '@lib/definitions';
+import { Category, Tecnology } from '@lib/definitions';
 import { tecnologies } from '@lib/placeholder-data';
 import Card from '@ui/card';
 
@@ -12,7 +12,7 @@ const description = `
     apasionante mundo de [Node.js].
 `;
 
-const filtredTecnologies = tecnologies.filter(t => t.isStack);
+const filtredTecnologies = (category: Category) => tecnologies.filter(t => t.isStack && t.category === category);
 
 function CardTecnology({tecnology} : {tecnology: Tecnology}){
     return ( 
@@ -24,8 +24,9 @@ function CardTecnology({tecnology} : {tecnology: Tecnology}){
                     <Image 
                         alt={tecnology.name}
                         src={`/icons/${tecnology.icon}`}
-                        width={42}
-                        height={42}
+                        height={0}
+                        width={0}
+                        style={{width:'42px', height: "auto" }}
                     />
                     <p className="z-20 mt-5 text-sm  duration-1000 text-zinc-400 group-hover:text-zinc-200">
                         {tecnology.name}
@@ -39,12 +40,19 @@ function CardTecnology({tecnology} : {tecnology: Tecnology}){
 export default function Stack(){
     return (
         <Section 
-            id="stack"
+            key="stack"
             title='Stack'
             description={description}
         >
+            <span>Frontend</span>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3">
-                {filtredTecnologies.map((tecnology) => (
+                {filtredTecnologies(Category.FRONTEND).map((tecnology) => (
+                    <CardTecnology key={tecnology.id} tecnology={tecnology} />
+                ))}       
+            </div>
+            <span>Backend</span>
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3">
+                {filtredTecnologies(Category.BACKEND).map((tecnology) => (
                     <CardTecnology key={tecnology.id} tecnology={tecnology} />
                 ))}       
             </div>

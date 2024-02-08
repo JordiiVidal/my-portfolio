@@ -1,18 +1,16 @@
 import { PropsWithChildren } from "react";
-import { Subtitle, Title } from "../ui/title";
-import TextWithLinks from "../ui/text-with-links";
+import { Subtitle, Title } from "@ui/title";
+import TextWithLinks from "@ui/text-with-links";
 
 interface SectionProps extends PropsWithChildren {
-    id: string; 
     title: string;
     subtitle?: string;
     description: string;
 }
 
-export const Section: React.FC<SectionProps> = ({ children, id, title, description, subtitle}) => {
+export const Section: React.FC<SectionProps> = ({ children, title, description, subtitle}) => {
 	return (
         <section 
-            id={id}
             className="flex flex-col gap-8 md:mb-48 mb-28"
         >	
             <div className="flex flex-col gap-1">     

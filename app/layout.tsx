@@ -4,7 +4,7 @@ import '@/app/styles/global.css';
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Jordi Vidal Rosell | Full Stack Developer",
+  description: "Jordi Vidal Roselló",
 };
 
 export default function RootLayout({
@@ -14,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body 
+        suppressHydrationWarning={true}
+        className={inter.className}
+      >
+        {children}
+      </body>
     </html>
   );
 }
