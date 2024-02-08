@@ -14,6 +14,16 @@ const description = `
 
 const filtredTecnologies = (category: Category) => tecnologiesData.filter(t => t.isStack && t.category === category);
 
+function GridTecnologies(category: Category) {
+    return (
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3">
+            {filtredTecnologies(category).map((tecnology) => (
+                <CardTecnology key={tecnology.id} tecnology={tecnology} />
+            ))}       
+        </div>
+    );
+}
+
 function CardTecnology({tecnology} : {tecnology: Tecnology}){
     return ( 
         <Card>
@@ -27,6 +37,8 @@ function CardTecnology({tecnology} : {tecnology: Tecnology}){
                         height={0}
                         width={0}
                         style={{width:'42px', height: "auto" }}
+                        loading="eager"
+                        aria-label={tecnology.name}
                     />
                     <p className="z-20 mt-5 text-sm  duration-1000 text-zinc-400 group-hover:text-zinc-200">
                         {tecnology.name}
@@ -45,17 +57,9 @@ export default function Stack(){
             description={description}
         >
             <span>Frontend</span>
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3">
-                {filtredTecnologies(Category.FRONTEND).map((tecnology) => (
-                    <CardTecnology key={tecnology.id} tecnology={tecnology} />
-                ))}       
-            </div>
+            { GridTecnologies(Category.FRONTEND) }
             <span>Backend</span>
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3">
-                {filtredTecnologies(Category.BACKEND).map((tecnology) => (
-                    <CardTecnology key={tecnology.id} tecnology={tecnology} />
-                ))}       
-            </div>
+            { GridTecnologies(Category.BACKEND) }
         </Section>
     );
 }
