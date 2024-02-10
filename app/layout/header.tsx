@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 const navigations = [
     { name: "Home" , link: "#about"},
@@ -14,6 +14,14 @@ const navigations = [
 export default function Header() {
 
     const [isOpen, setOpen] = React.useState(false);
+
+    useEffect(() => {
+        document.body.classList.toggle('overflow-hidden', isOpen);
+
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [isOpen]);
     
     function handleClick(){
         setOpen(!isOpen);
@@ -32,13 +40,12 @@ export default function Header() {
                             height={20}
                         />
                     </button>
-                    <ul className={`${isOpen ? 'flex' : 'hidden'} duration-500 md:flex md:flex-row flex-col justify-center md:gap-6 gap-8 md:h-fit h-[70vh]`}>
+                    <ul className={`${isOpen ? 'flex' : 'hidden'} duration-500 md:flex md:flex-row flex-col justify-center md:gap-6 gap-8 md:h-fit h-[100vh]`}>
                         {navigations.map((item) => (
                             <Link 
                                 key={item.name}
                                 href={item.link}
-
-                                className="duration-200 text-zinc-400 hover:text-zinc-100" 
+                                className="md:text-sm text-2xl duration-200 text-zinc-400 hover:text-zinc-100" 
                             >
                                 { item.name }
                             </Link>
