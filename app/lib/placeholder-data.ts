@@ -203,8 +203,8 @@ export const workExperiencesData: WorkExperience[] = [
     description:
       "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
     current: false,
-    startDate: "2016",
-    endDate: "2016",
+    startDate: "2018",
+    endDate: "2018",
     tecnologies: [1, 3, 14, 17],
   },
 ];
