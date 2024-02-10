@@ -31,6 +31,7 @@ export default function About(){
     return (
        <Section 
             key="about"
+            id="about"
             title='Jordi Vidal Roselló'
             subtitle='Full-Stack Developer'
             description={description}

@@ -39,6 +39,7 @@ export default function Work(){
     return (
         <Section 
             key="work"
+            id="work"
             title="Work Experience"
             description={description}
         >

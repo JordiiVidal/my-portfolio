@@ -26,6 +26,12 @@ export default function Header() {
     function handleClick(){
         setOpen(!isOpen);
     }
+
+    function handleLinkClick(){
+        if(isOpen){
+            setOpen(false);
+        }
+    }
     
     return (
         <header>
@@ -45,6 +51,7 @@ export default function Header() {
                             <Link 
                                 key={item.name}
                                 href={item.link}
+                                onClick={handleLinkClick}
                                 className="md:text-sm text-2xl duration-200 text-zinc-400 hover:text-zinc-100" 
                             >
                                 { item.name }
