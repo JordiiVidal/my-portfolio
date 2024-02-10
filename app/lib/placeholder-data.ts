@@ -183,7 +183,7 @@ export const workExperiencesData: WorkExperience[] = [
     current: true,
     startDate: "2021",
     endDate: "",
-    tecnologies: [1, 2, 3, 4, 5, 6, 8, 9],
+    tecnologies: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12],
   },
   {
     id: 2,
@@ -194,7 +194,7 @@ export const workExperiencesData: WorkExperience[] = [
     current: false,
     startDate: "2018",
     endDate: "2020",
-    tecnologies: [1, 4, 5, 7, 10, 13],
+    tecnologies: [1, 4, 5, 8, 10, 13, 16],
   },
   {
     id: 3,
@@ -205,6 +205,6 @@ export const workExperiencesData: WorkExperience[] = [
     current: false,
     startDate: "2016",
     endDate: "2016",
-    tecnologies: [1, 3, 11, 14],
+    tecnologies: [1, 3, 14, 17],
   },
 ];
