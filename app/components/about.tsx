@@ -23,7 +23,7 @@ const buttons: ButtonLinkProps[] = [
     {
         text: "Currículum",
         icon: "buttons/resume.svg",
-        link: "resume.pdf"
+        link: "documents/resume.pdf"
     },
 ]
 
