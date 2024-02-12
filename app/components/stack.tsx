@@ -57,9 +57,9 @@ export default function Stack(){
             title='Stack'
             description={description}
         >
-            <span>Front-End</span>
+            <span>Frontend</span>
             { GridTecnologies(Category.FRONTEND) }
-            <span>Back-End</span>
+            <span>Backend</span>
             { GridTecnologies(Category.BACKEND) }
         </Section>
     );
