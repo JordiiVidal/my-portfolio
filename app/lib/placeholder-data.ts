@@ -178,8 +178,12 @@ export const workExperiencesData: WorkExperience[] = [
     id: 1,
     company: "Audax Renovables",
     title: "Full-Stack Developer",
-    description:
-      "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
+    description: `
+      Demostré rápidamente mi capacidad de asumir responsabilidades al gestionar un proyecto interno 
+      de significativa envergadura. Contribuí a la mejora de la eficiencia mediante la 
+      refactorización del código y la implementación de nuevas funcionalidades, fortaleciendo la eficiencia 
+      y la colaboración del equipo. 
+    `,
     current: true,
     startDate: "2021",
     endDate: "",
@@ -189,8 +193,12 @@ export const workExperiencesData: WorkExperience[] = [
     id: 2,
     company: "Agencia Ninja",
     title: "Full-Stack Developer",
-    description:
-      "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
+    description: `
+      Liderazgo en el desarrollo de proyectos desde cero para proyectos tanto internos como clientes externos. 
+      Además, destacó en el diseño e implementación de interfaces de usuario atractivas y adaptables, siguiendo 
+      los últimos estándares de desarrollo web. Mi participación en el desarrollo 
+      de aplicaciones híbridas amplió mi experiencia práctica significativamente.
+    `,
     current: false,
     startDate: "2018",
     endDate: "2020",
@@ -200,8 +208,12 @@ export const workExperiencesData: WorkExperience[] = [
     id: 3,
     company: "Flumotion",
     title: "Full-Stack Developer",
-    description:
-      "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
+    description: `
+      Contribuí al desarrollo de un software interno, donde asumí responsabilidades en tareas diversas, 
+      abordando tanto mejoras como incidencias. Durante esta experiencia, trabajé en un equipo pequeño 
+      de alto rendimiento. Además, adquirí una comprensión profunda de las prácticas ágiles en la gestión 
+      de proyectos, mejorando la comunicación y la planificación.
+    `,
     current: false,
     startDate: "2018",
     endDate: "2018",

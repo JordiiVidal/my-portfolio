@@ -52,19 +52,11 @@ export default function Work(){
                                 <h4 className="mb-0 text-xl font-semibold">{ work.company }</h4>
                             </div>
                             <div className="mb-6 ml-4">
-                                <span className="text-sm text-neutral-700 dark:text-neutral-400">
+                                <span className="text-sm text-neutral-700 dark:text-neutral-500">
                                     { work.title}, {expiranceDates(work)}
                                 </span>
-                                <div className="my-4  text-neutral-500 dark:text-neutral-300">
-                                    <div role="status" className="max-w-sm animate-pulse">
-                                        <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-                                        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-                                        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-                                        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-                                        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-                                        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-                                        <span className="sr-only">Loading...</span>
-                                    </div>
+                                <div className="mt-4 mb-6 text-sm text-neutral-600 dark:text-neutral-400 ">
+                                   { work.description }
                                 </div> 
                                 <ChipsTecnologies idWorkedTecnologyList={work.tecnologies} /> 
                             </div>
