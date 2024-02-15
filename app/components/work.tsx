@@ -52,10 +52,10 @@ export default function Work(){
                                 <h4 className="mb-0 text-xl font-semibold">{ work.company }</h4>
                             </div>
                             <div className="mb-6 ml-4">
-                                <span className="text-sm text-neutral-500">
+                                <span className="text-sm text-neutral-400">
                                     { work.title}, {expiranceDates(work)}
                                 </span>
-                                <div className="mt-4 mb-6 text-sm text-neutral-300 text-pretty">
+                                <div className="mt-4 mb-6 text-sm text-gray-400 text-pretty">
                                    { work.description }
                                 </div> 
                                 <ChipsTecnologies idWorkedTecnologyList={work.tecnologies} /> 
