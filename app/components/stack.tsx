@@ -61,6 +61,8 @@ export default function Stack(){
             { GridTecnologies(Category.FRONTEND) }
             <span>Backend</span>
             { GridTecnologies(Category.BACKEND) }
+            <span>Tools</span>
+            { GridTecnologies(Category.TOOLS) }
         </Section>
     );
 }
