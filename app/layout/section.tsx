@@ -19,7 +19,7 @@ export const Section: React.FC<SectionProps> = ({ children, id, title, descripti
                 <Title text={title}/>
                 { subtitle && <Subtitle text={subtitle} />}
             </div>
-            <p className="prose prose-neutral dark:prose-invert text-center dark:text-gray-400 text-gray-600 text-sm tracking-wide leading-6 text-pretty">
+            <p className="prose prose-neutral py-6 dark:prose-invert text-center dark:text-gray-400 text-gray-600 text-base tracking-wide leading-6 text-pretty">
                 <TextWithLinks>
                     {description}
                 </TextWithLinks>

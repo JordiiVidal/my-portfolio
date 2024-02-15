@@ -27,24 +27,20 @@ function GridTecnologies(category: Category) {
 function CardTecnology({tecnology} : {tecnology: Tecnology}){
     return ( 
         <Card>
-            <Link
-                href="#"
-            >
-                <article className="p-5 flex flex-col items-center align-middle">
-                    <Image 
-                        alt={tecnology.name}
-                        src={`/icons/${tecnology.icon}`}
-                        height={0}
-                        width={0}
-                        style={{width:'42px', height: "auto" }}
-                        loading="eager"
-                        aria-label={tecnology.name}
-                    />
-                    <p className="z-20 mt-5 text-sm  duration-1000 text-zinc-400 group-hover:text-zinc-200">
-                        {tecnology.name}
-                    </p>
-                </article>
-            </Link>
+            <article className="p-5 flex flex-col items-center align-middle cursor-default">
+                <Image 
+                    alt={tecnology.name}
+                    src={`/icons/${tecnology.icon}`}
+                    height={0}
+                    width={0}
+                    style={{width:'42px', height: "auto" }}
+                    loading="eager"
+                    aria-label={tecnology.name}
+                />
+                <p className="z-20 mt-5 text-sm  duration-1000 text-zinc-400 group-hover:text-zinc-200">
+                    {tecnology.name}
+                </p>
+            </article>
         </Card>
     );
 }
