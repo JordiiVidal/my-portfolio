@@ -235,8 +235,7 @@ export const workExperiencesData: WorkExperience[] = [
     title: "Full-Stack Developer",
     description: `
       Liderazgo en el desarrollo de proyectos desde cero para proyectos tanto internos como clientes externos. 
-      Además, destacó en el diseño e implementación de interfaces de usuario atractivas y adaptables, siguiendo 
-      los últimos estándares de desarrollo web. Mi participación en el desarrollo 
+      Además, destacó en el diseño e implementación de interfaces de usuario atractivas y adaptables. Mi participación en el desarrollo 
       de aplicaciones híbridas amplió mi experiencia práctica significativamente.
     `,
     current: false,
