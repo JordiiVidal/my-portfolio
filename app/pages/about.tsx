@@ -27,7 +27,7 @@ const buttons: ButtonLinkProps[] = [
     },
 ]
 
-export default function About(){
+export function About(){
     return (
        <Section 
             key="about"

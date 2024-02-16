@@ -45,7 +45,7 @@ function CardTecnology({tecnology} : {tecnology: Tecnology}){
     );
 }
 
-export default function Stack(){
+export  function Stack(){
     return (
         <Section 
             key="stack"

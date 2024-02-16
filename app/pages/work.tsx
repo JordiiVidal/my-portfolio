@@ -35,7 +35,7 @@ function ChipsTecnologies({ idWorkedTecnologyList } : {idWorkedTecnologyList : n
     )
 }
 
-export default function Work(){
+export  function Work(){
     return (
         <Section 
             key="work"
