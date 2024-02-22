@@ -1,5 +1,5 @@
-import { Section } from '@layout/section';
-import ButtonLink, { ButtonLinkProps } from '@ui/button-link';
+import { Section } from "@layout/section";
+import ButtonLink, { ButtonLinkProps } from "@ui/button-link";
 
 const description = `
     Con [+5 años] de experiencia creando aplicaciones [Web] e [Híbridas], estoy preparado 
@@ -8,40 +8,37 @@ const description = `
 `;
 
 const buttons: ButtonLinkProps[] = [
-    {
-        text: "Linkedin",
-        icon: "buttons/linkedin.svg",
-        link: "https://www.linkedin.com/in/jordi-vidal-rosello/",
+  {
+    text: "Linkedin",
+    icon: "buttons/linkedin.svg",
+    link: "https://www.linkedin.com/in/jordi-vidal-rosello/",
+  },
+  {
+    text: "Github",
+    icon: "buttons/github.svg",
+    link: "https://github.com/JordiiVidal",
+  },
+  {
+    text: "Currículum",
+    icon: "buttons/resume.svg",
+    link: "documents/resume.pdf",
+  },
+];
 
-    },
-    {
-        text: "Github",
-        icon: "buttons/github.svg",
-        link: "https://github.com/JordiiVidal",
-    },
-    {
-        text: "Currículum",
-        icon: "buttons/resume.svg",
-        link: "documents/resume.pdf"
-    },
-]
-
-export function About(){
-    return (
-       <Section 
-            key="about"
-            id="about"
-            title='Jordi Vidal Roselló'
-            subtitle='Full-Stack Developer'
-            description={description}
-        >
-            <div className="flex flex-col md:flex-row md:justify-center gap-3">
-                {
-                    buttons.map((btn) => (
-                        <ButtonLink key={btn.text} {...btn}  />
-                    ))
-                }
-            </div>
-       </Section>
-    );
+export function About() {
+  return (
+    <Section
+      key="about"
+      id="about"
+      title="Jordi Vidal Roselló"
+      subtitle="Full-Stack Developer"
+      description={description}
+    >
+      <div className="flex flex-col md:flex-row md:justify-center gap-3">
+        {buttons.map((btn) => (
+          <ButtonLink key={btn.text} {...btn} />
+        ))}
+      </div>
+    </Section>
+  );
 }
