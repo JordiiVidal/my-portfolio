@@ -37,7 +37,7 @@ function CardTecnology({ tecnology }: { tecnology: Tecnology }) {
           loading="eager"
           aria-label={tecnology.name}
         />
-        <p className="z-20 mt-5 text-sm  duration-1000 text-zinc-400 group-hover:text-zinc-200">
+        <p className="z-20 mt-5 text-xs  duration-1000 text-zinc-400 group-hover:text-zinc-200">
           {tecnology.name}
         </p>
       </article>
