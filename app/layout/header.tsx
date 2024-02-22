@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <header>
       <div className="fixed inset-x-0 top-0 z-50 md:backdrop-blur backdrop-blur-2xl duration-200 border-b  bg-zinc-900/500  border-zinc-800 ">
-        <nav className="container grid md:grid-cols-3 grid-cols-2 p-4 mx-auto">
+        <nav className="container grid md:grid-cols-3 grid-cols-2 p-4 mx-auto items-center">
           <div className="font-semibold text-base">Portfolio.</div>
           <button className="flex md:hidden justify-end" onClick={handleClick}>
             <Image
@@ -47,7 +47,7 @@ export default function Header() {
           <ul
             className={`${
               isOpen ? "flex" : "hidden"
-            } duration-500 md:flex md:flex-row flex-col justify-center md:gap-6 gap-8 md:h-fit h-[100vh] items-center`}
+            } duration-500 md:flex md:flex-row flex-col justify-center md:gap-6 gap-8 md:h-fit h-[100vh]`}
           >
             {navigations.map((item) => (
               <Link
