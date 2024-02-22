@@ -2,10 +2,9 @@ import { Section } from '@layout/section';
 import ButtonLink, { ButtonLinkProps } from '@ui/button-link';
 
 const description = `
-    Con [+5 años] de experiencia creando aplicaciones web e híbridas, estoy preparado 
-    para dar un salto en mi carrera profesional y enfocarme en mi pasión por [JavaScript] y 
-    [TypeScript], me especializo en el framework [Angular]. Me entusiasma trabajar en proyectos 
-    innovadores y seguir aprendiendo cada día.
+    Con [+5 años] de experiencia creando aplicaciones [Web] e [Híbridas], estoy preparado 
+    para dar un salto en mi carrera [Profesional] y enfocarme en mi pasión por [JavaScript] y 
+    [TypeScript], me especializo en el framework [Angular].
 `;
 
 const buttons: ButtonLinkProps[] = [

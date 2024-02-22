@@ -13,7 +13,7 @@ export default function Chip({icon, name, color}: {icon: string, name: string, c
     const style = customStyle(color);
 
     return (
-        <span className={`flex gap-x-2 rounded-full text-xs text-white py-1 px-2`} style={style}>
+        <span className={`flex gap-x-2 rounded-full text-sm text-white py-1 px-2`} style={style}>
             <Image
                 src={`/icons/${icon}`}
                 className="rounded-full mr-2"
