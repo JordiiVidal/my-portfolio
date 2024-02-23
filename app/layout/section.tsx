@@ -26,7 +26,7 @@ const Subtitle = ({ text }: { text: string }) => {
 
 const Description = ({ text }: { text: string }) => {
   return (
-    <p className="text-lg/7 py-6 prose-invert text-center text-zinc-400 leading-relaxed">
+    <p className="text-lg/7 py-6 prose-invert text-center text-zinc-400">
       <TextWithLinks>{text}</TextWithLinks>
     </p>
   );
