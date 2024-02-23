@@ -10,7 +10,7 @@ interface SectionProps extends PropsWithChildren {
 
 const Title = ({ text }: { text: string }) => {
   return (
-    <h1 className="font-bold text-5xl text-center bg-gradient-to-r from-blue-500 dark:from-blue-400 to-cyan-400 dark:to-cyan-400 via-teal-500 dark:via-teal-500 via-40% bg-clip-text text-transparent">
+    <h1 className="font-bold text-5xl text-center bg-gradient-to-r from-blue-400 to-cyan-400 via-teal-500 via-40% bg-clip-text text-transparent">
       {text}
     </h1>
   );
@@ -18,7 +18,7 @@ const Title = ({ text }: { text: string }) => {
 
 const Subtitle = ({ text }: { text: string }) => {
   return (
-    <h2 className="text-center block leading-relaxed text-2xl font-bold text-gray-800 dark:text-gray-300">
+    <h2 className="text-center block leading-relaxed text-2xl font-bold text-gray-300">
       {text}
     </h2>
   );

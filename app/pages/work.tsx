@@ -49,11 +49,11 @@ export function Work() {
       title="Work Experience"
       description={description}
     >
-      <ol className="border-l border-neutral-300 dark:border-neutral-500">
+      <ol className="border-l border-neutral-500">
         {workExperiencesData.map((work) => (
           <li key={work.id}>
             <div className="flex-start flex items-center pt-3">
-              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
+              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-500"></div>
               <h4 className="mb-0 text-xl font-semibold">{work.company}</h4>
             </div>
             <div className="mb-6 ml-4">
