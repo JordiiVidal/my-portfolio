@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body suppressHydrationWarning={true} className={inter.className}>
         {children}
         <SpeedInsights />

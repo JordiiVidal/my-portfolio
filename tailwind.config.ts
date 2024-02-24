@@ -19,6 +19,9 @@ const config: Config = {
       "5xl": "3.052rem",
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
