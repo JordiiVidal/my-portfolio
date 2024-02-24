@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="md:max-w-2xl mx-auto">
       <Header />
-      <div className="px-5">
+      <div className="md:px-2 px-10">
         <About />
         <Stack />
         <Work />
