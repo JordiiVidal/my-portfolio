@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { inter } from "@/app/fonts/inter";
 import "@/app/styles/global.css";
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
