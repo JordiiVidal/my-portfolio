@@ -34,7 +34,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className="fixed inset-x-0 top-0 z-50 md:backdrop-blur backdrop-blur-2xl duration-200 border-b  bg-zinc-900/500  border-zinc-800 ">
+      <div className="fixed inset-x-0 top-0 z-50 md:backdrop-blur backdrop-blur-2xl duration-200 border-b bg-zinc-900/500 border-zinc-200 dark:border-zinc-800">
         <nav className="container grid md:grid-cols-3 grid-cols-2 p-4 mx-auto items-center">
           <div className="font-semibold text-base">Portfolio.</div>
           <button className="flex md:hidden justify-end" onClick={handleClick}>
@@ -55,13 +55,13 @@ export default function Header() {
                 key={item.name}
                 href={item.link}
                 onClick={handleLinkClick}
-                className="md:text-header text-2xl duration-200 text-zinc-400 hover:text-zinc-200"
+                className="md:text-header text-2xl duration-200 text-zinc-800 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-200"
               >
                 {item.name}
               </Link>
             ))}
           </ul>
-          <div className="md:flex hidden justify-end color-400 hover:color-zinc-200">
+          <div className="md:flex hidden justify-end">
             <ThemeSwitch />
           </div>
         </nav>
