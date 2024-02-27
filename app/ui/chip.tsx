@@ -22,7 +22,7 @@ export default function Chip({
 
   return (
     <span
-      className={`flex gap-x-2 rounded-full text-xxs text-white py-1 px-2`}
+      className={`flex gap-x-2 rounded-full text-xxs text-zinc-700 dark:text-white py-1 px-2`}
       style={style}
     >
       <Image

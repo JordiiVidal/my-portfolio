@@ -8,7 +8,7 @@ interface ExternalLinkProps {
 
 const ExternalLink: React.FC<ExternalLinkProps> = ({ text, icon }) => {
   return (
-    <span className="not-prose border border-neutral-700 bg-neutral-800 rounded text-xs inline-flex items-center leading-4 text-neutral-100 no-underline py-0.5 px-2">
+    <span className="not-prose border border-neutral-300 dark:border-neutral-700 bg-stone-100 dark:bg-neutral-800 text-neutral-950 dark:text-neutral-100 rounded text-xs inline-flex items-center leading-4 no-underline py-0.5 px-2">
       {icon && (
         <Image
           src={`/icons/${icon}`}

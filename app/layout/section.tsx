@@ -18,7 +18,7 @@ const Title = ({ text }: { text: string }) => {
 
 const Subtitle = ({ text }: { text: string }) => {
   return (
-    <h2 className="text-center block leading-relaxed md:text-2xl text-xl font-bold text-gray-300">
+    <h2 className="text-center block leading-relaxed md:text-2xl text-xl font-bold text-gray-600 dark:text-gray-300">
       {text}
     </h2>
   );
@@ -26,7 +26,7 @@ const Subtitle = ({ text }: { text: string }) => {
 
 const Description = ({ text }: { text: string }) => {
   return (
-    <p className="md:text-lg/7 text-sm py-6 prose-invert text-center text-zinc-400">
+    <p className="md:text-lg/7 text-sm py-6 prose-invert text-center text-zinc-600 dark:text-zinc-400">
       <TextWithLinks>{text}</TextWithLinks>
     </p>
   );

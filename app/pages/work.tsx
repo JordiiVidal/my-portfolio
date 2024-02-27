@@ -53,14 +53,14 @@ export function Work() {
         {workExperiencesData.map((work) => (
           <li key={work.id}>
             <div className="flex-start flex items-center pt-3">
-              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-500"></div>
+              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-gray-800 dark:bg-neutral-500"></div>
               <h4 className="mb-0 text-xl font-semibold">{work.company}</h4>
             </div>
             <div className="mb-6 ml-4">
-              <span className="text-xs text-zinc-300">
+              <span className="text-xs dark:text-zinc-300">
                 {work.title}, {expiranceDates(work)}
               </span>
-              <div className="mt-4 mb-6 text-xs text-zinc-400 text-pretty">
+              <div className="mt-4 mb-6 text-xs text-zinc-600 dark:text-zinc-400 text-pretty">
                 {work.description}
               </div>
               <ChipsTecnologies idWorkedTecnologyList={work.tecnologies} />
