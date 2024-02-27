@@ -36,14 +36,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body suppressHydrationWarning={true} className={inter.className}>
+    <html lang="es" suppressHydrationWarning className={inter.className}>
+      <body className="bg-zinc-900">
         <Providers>
           <Header />
           {children}
-          <SpeedInsights />
           <Footer />
         </Providers>
+        <SpeedInsights />
       </body>
     </html>
   );

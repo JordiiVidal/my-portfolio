@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
+import ThemeSwitch from "../ui/theme-switch";
 
 const navigations = [
   { name: "Home", link: "#about" },
@@ -60,6 +61,9 @@ export default function Header() {
               </Link>
             ))}
           </ul>
+          <div className="md:flex hidden justify-end color-400 hover:color-zinc-200">
+            <ThemeSwitch />
+          </div>
         </nav>
       </div>
     </header>
