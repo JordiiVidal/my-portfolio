@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import { inter } from "@/app/fonts/inter";
-import "@/app/styles/global.css";
+import { inter } from "./fonts/inter";
+import "./styles/global.css";
+import { Providers } from "./providers";
+import Header from "./layout/header";
+import Footer from "./layout/footer";
 
 export const metadata: Metadata = {
   title: "Jordi Vidal",
@@ -35,8 +38,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body suppressHydrationWarning={true} className={inter.className}>
-        {children}
-        <SpeedInsights />
+        <Providers>
+          <Header />
+          {children}
+          <SpeedInsights />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
