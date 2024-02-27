@@ -10,6 +10,7 @@ const config: Config = {
     fontSize: {
       xxs: "0.7rem",
       xs: "0.8rem",
+      header: "0.9rem",
       sm: "0.99rem",
       base: "1.16rem",
       xl: "1.25rem",

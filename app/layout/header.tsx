@@ -54,7 +54,7 @@ export default function Header() {
                 key={item.name}
                 href={item.link}
                 onClick={handleLinkClick}
-                className="md:text-sm text-2xl duration-200 text-zinc-400 hover:text-zinc-200"
+                className="md:text-header text-2xl duration-200 text-zinc-400 hover:text-zinc-200"
               >
                 {item.name}
               </Link>

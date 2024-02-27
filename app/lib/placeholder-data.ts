@@ -224,9 +224,9 @@ export const workExperiencesData: WorkExperience[] = [
       refactorización del código y la implementación de nuevas funcionalidades, fortaleciendo la eficiencia 
       y la colaboración del equipo. 
     `,
-    current: true,
+    current: false,
     startDate: "2021",
-    endDate: "",
+    endDate: "2024",
     tecnologies: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12],
   },
   {
