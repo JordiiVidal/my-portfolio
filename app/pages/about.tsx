@@ -10,17 +10,17 @@ const description = `
 const buttons: ButtonLinkProps[] = [
   {
     text: "Linkedin",
-    icon: "buttons/linkedin.svg",
+    icon: "linkedin",
     link: "https://www.linkedin.com/in/jordi-vidal-rosello/",
   },
   {
     text: "Github",
-    icon: "buttons/github.svg",
+    icon: "github",
     link: "https://github.com/JordiiVidal",
   },
   {
     text: "Currículum",
-    icon: "buttons/resume.svg",
+    icon: "resume",
     link: "documents/resume.pdf",
   },
 ];

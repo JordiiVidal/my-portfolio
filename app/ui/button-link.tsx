@@ -1,10 +1,26 @@
 import Image from "next/image";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import { FaRegFilePdf } from "react-icons/fa6";
+
 import Link from "next/link";
 
 export interface ButtonLinkProps {
   text: string;
   icon: string;
   link: string;
+}
+
+function customIcon(icon: string) {
+  switch (icon) {
+    case "github":
+      return <FaGithub />;
+    case "linkedin":
+      return <FaLinkedinIn />;
+    default:
+      return <FaRegFilePdf />;
+  }
 }
 
 const ButtonLink: React.FC<ButtonLinkProps> = (props) => {
@@ -14,26 +30,13 @@ const ButtonLink: React.FC<ButtonLinkProps> = (props) => {
         href={props.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="border dark:border-neutral-700 dark:bg-black rounded flex items-center justify-between px-4 py-2 w-full gap-x-4"
+        className="border dark:border-neutral-700 rounded flex items-center justify-between px-4 py-2 w-full gap-x-4"
       >
-        <div className="flex gap-5">
-          <Image
-            src={props.icon}
-            alt={props.text}
-            height={0}
-            width={0}
-            style={{ width: "16px", height: "auto" }}
-          />
+        <div className="flex items-center	gap-5">
+          {customIcon(props.icon)}
           <p className="font-normal dark:text-neutral-100">{props.text}</p>
         </div>
-        <Image
-          src="buttons/external-link.svg"
-          alt={props.text}
-          height={0}
-          width={0}
-          style={{ width: "10px", height: "auto" }}
-          className="dark:text-neutral-300 transform transition-transform duration-300 group-hover:-rotate-12"
-        />
+        <RiArrowRightUpLine className="text-black dark:text-neutral-300" />
       </Link>
     </div>
   );
