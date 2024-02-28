@@ -1,8 +1,6 @@
-import Image from "next/image";
-import { RiArrowRightUpLine } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa6";
-import { FaRegFilePdf } from "react-icons/fa6";
+import { FaGithub, FaRegFilePdf } from "react-icons/fa6";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 import Link from "next/link";
 

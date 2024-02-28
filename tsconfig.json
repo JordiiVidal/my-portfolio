@@ -20,8 +20,8 @@
     "paths": {
       "@/*": ["./*"],
       "@lib/*": ["./app/lib/*"],
-      "@ui/*": ["./app/ui/*"],
-      "@layout/*": ["./app/layout/*"]
+      "@ui/*": ["./app/components/ui/*"],
+      "@layout/*": ["./app/components/layout/*"]
     }
   },
   "include": [

@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
 
+import Footer from "@layout/footer";
+import Header from "@layout/header";
 import { inter } from "./fonts/inter";
-import "./styles/global.css";
 import { Providers } from "./providers";
-import Header from "./layout/header";
-import Footer from "./layout/footer";
+import "./styles/global.css";
 
 export const metadata: Metadata = {
   title: "Jordi Vidal",

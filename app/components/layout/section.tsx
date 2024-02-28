@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+
 import TextWithLinks from "@ui/text-with-links";
 
 interface SectionProps extends PropsWithChildren {

@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import ThemeSwitch from "../ui/theme-switch";
+
+import ThemeSwitch from "@ui/theme-switch";
 
 const navigations = [
   { name: "Home", link: "#about" },

@@ -1,5 +1,6 @@
 import React from "react";
-import ExternalLink from "./external-link"; // Ajusta la ruta según la ubicación de tu componente ExternalLink
+
+import ExternalLink from "@ui/external-link";
 
 interface TextWithLinksProps {
   children: string;
