@@ -21,7 +21,7 @@ const buttons: ButtonLinkProps[] = [
   {
     text: "Currículum",
     icon: "resume",
-    link: "documents/resume.pdf",
+    link: "/documents/resume.pdf",
   },
 ];
 
