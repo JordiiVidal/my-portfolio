@@ -11,7 +11,7 @@ export default function ThemeSwitch() {
 
   if (!mounted)
     return (
-      <IoIosContrast className="text-base text-zinc-800 dark:text-zinc-200 cursor-default animate-pulse" />
+      <IoIosContrast className="text-base text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-200 cursor-default animate-pulse" />
     );
 
   if (resolvedTheme === "dark")
