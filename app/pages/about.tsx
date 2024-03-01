@@ -21,7 +21,7 @@ const buttons: ButtonLinkProps[] = [
   {
     text: "Currículum",
     icon: "resume",
-    link: "/documents/resume.pdf",
+    link: "https://my-portfolio-vidiic.vercel.app/documents/resume.pdf",
   },
 ];
 
