@@ -1,32 +1,38 @@
+import { motion, useAnimation } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
-import { IoIosContrast } from "react-icons/io";
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
+  const controls = useAnimation();
 
-  useEffect(() => setMounted(true), []);
+  const handleClick = () => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  };
 
-  if (!mounted)
-    return (
-      <IoIosContrast className="text-base text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-200 cursor-default animate-pulse" />
-    );
+  useEffect(() => {
+    setMounted(true);
+    controls.start({
+      scale: [0.79, 1],
+      rotate: resolvedTheme === "dark" ? [0, 180] : [180, 0],
+      transition: {
+        ease: "easeInOut",
+      },
+    });
+  }, [resolvedTheme, controls]);
 
-  if (resolvedTheme === "dark")
-    return (
-      <FiSun
-        className="text-base text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-200 cursor-pointer"
-        onClick={() => setTheme("light")}
-      />
-    );
-
-  if (resolvedTheme === "light")
-    return (
-      <FiMoon
-        className="text-base text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-200 cursor-pointer"
-        onClick={() => setTheme("dark")}
-      />
-    );
+  if (!mounted) {
+    return <div></div>;
+  }
+  return (
+    <motion.div
+      className="text-base text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-200 cursor-pointer"
+      onClick={handleClick}
+      animate={controls}
+    >
+      {resolvedTheme === "dark" ? <FiSun /> : <FiMoon />}
+    </motion.div>
+  );
 }
