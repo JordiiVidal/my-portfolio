@@ -16,7 +16,7 @@ export default function ThemeSwitch() {
     setMounted(true);
     controls.start({
       scale: [0.79, 1],
-      rotate: resolvedTheme === "dark" ? [0, 180] : [180, 0],
+      rotate: resolvedTheme === "dark" ? [0, 90] : [90, 0],
       transition: {
         ease: "easeInOut",
       },
