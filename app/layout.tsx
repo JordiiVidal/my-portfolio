@@ -8,7 +8,7 @@ import { Providers } from "./providers";
 import "./styles/global.css";
 
 export const metadata: Metadata = {
-  title: "Jordi Vidal",
+  title: "Jordi Vidal Roselló",
   description:
     "Hello, I'm Jordi Vidal Roselló. I Full-Stack Developer from Barcelon.",
   applicationName: "Jordi Vidal Portfolio",
