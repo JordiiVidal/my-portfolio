@@ -1,7 +1,7 @@
 export type WorkExperience = {
   id: number;
   title: string;
-  description: string;
+  description: string | null;
   company: string;
   current: boolean;
   startDate: string;

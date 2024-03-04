@@ -41,6 +41,19 @@ function ChipsTecnologies({
   );
 }
 
+function FakeDescription() {
+  return (
+    <div role="status" className="max-w-sm animate-pulse">
+      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+      <span className="sr-only">Loading...</span>
+    </div>
+  );
+}
+
 export function Work() {
   return (
     <Section
@@ -50,23 +63,25 @@ export function Work() {
       description={description}
     >
       <ol className="border-l border-neutral-500">
-        {workExperiencesData.map((work) => (
-          <li key={work.id}>
-            <div className="flex-start flex items-center pt-3">
-              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-gray-800 dark:bg-neutral-500"></div>
-              <h4 className="mb-0 text-xl font-semibold">{work.company}</h4>
-            </div>
-            <div className="mb-6 ml-4">
-              <span className="text-xs dark:text-zinc-300">
-                {work.title}, {expiranceDates(work)}
-              </span>
-              <div className="mt-4 mb-6 text-xs text-zinc-600 dark:text-zinc-400 text-pretty">
-                {work.description}
+        {workExperiencesData
+          .sort((a, b) => b.id - a.id)
+          .map((work) => (
+            <li key={work.id}>
+              <div className="flex-start flex items-center pt-3">
+                <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-gray-800 dark:bg-neutral-500"></div>
+                <h4 className="mb-0 text-xl font-semibold">{work.company}</h4>
               </div>
-              <ChipsTecnologies idWorkedTecnologyList={work.tecnologies} />
-            </div>
-          </li>
-        ))}
+              <div className="mb-6 ml-4">
+                <span className="text-xs dark:text-zinc-300">
+                  {work.title}, {expiranceDates(work)}
+                </span>
+                <div className="mt-4 mb-6 text-xs text-zinc-600 dark:text-zinc-400 text-pretty">
+                  {work.description ?? <FakeDescription />}
+                </div>
+                <ChipsTecnologies idWorkedTecnologyList={work.tecnologies} />
+              </div>
+            </li>
+          ))}
       </ol>
     </Section>
   );

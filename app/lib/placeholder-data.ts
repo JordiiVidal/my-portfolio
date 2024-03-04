@@ -215,7 +215,7 @@ export const tecnologiesData: Tecnology[] = [
 
 export const workExperiencesData: WorkExperience[] = [
   {
-    id: 1,
+    id: 3,
     company: "Audax Renovables",
     title: "Full-Stack Developer",
     description: `
@@ -244,7 +244,7 @@ export const workExperiencesData: WorkExperience[] = [
     tecnologies: [1, 4, 5, 8, 10, 13, 16],
   },
   {
-    id: 3,
+    id: 1,
     company: "Flumotion",
     title: "Full-Stack Developer",
     description: `
@@ -257,5 +257,15 @@ export const workExperiencesData: WorkExperience[] = [
     startDate: "2018",
     endDate: "2018",
     tecnologies: [1, 3, 14, 17],
+  },
+  {
+    id: 4,
+    company: "Grupo ICA",
+    title: "Frontend Developer",
+    description: null,
+    current: true,
+    startDate: "2024",
+    endDate: "",
+    tecnologies: [2, 3, 7],
   },
 ];
