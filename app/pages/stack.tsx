@@ -7,7 +7,7 @@ import Card from "@ui/card";
 
 const description = `
     En mi camino he forjado una sólida relación con [JavaScript] 
-    y [PHP]. En los últimos [3 años], me he especializado en [Angular]. Actualmente, estoy explorando el 
+    y [PHP]. En los últimos [3 años] me he especializado en [Angular] Actualmente, estoy explorando el 
     apasionante mundo de [Node.js].
 `;
 
