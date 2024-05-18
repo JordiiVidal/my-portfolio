@@ -213,7 +213,7 @@ export const tecnologiesData: Tecnology[] = [
   },
   {
     id: 22,
-    name: "BitBucket",
+    name: "Bitbucket",
     icon: "bitbucket.svg",
     color: "#0052CC",
     experience: 1,
